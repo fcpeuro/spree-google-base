@@ -38,7 +38,7 @@ module SpreeGoogleBase
       @title = Spree::GoogleBase::Config[:store_name]
 
       @domain = Spree::Config[:site_url]
-      @domain = "http://#{@domain}"unless @domain.starts_with?("http")
+      @domain = "https://#{@domain}" unless @domain.starts_with?("https")
     end
 
     def ar_scope
